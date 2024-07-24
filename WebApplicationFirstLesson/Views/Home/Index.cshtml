@@ -1,0 +1,75 @@
+﻿@model WebApplicationFirstLesson.Models.MainViewModel
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - Our Restaurant</title>
+    <link rel="stylesheet" href="~/css/style.css">
+</head>
+<body>
+    <header class="site-header">
+        <div class="container">
+            <h1>Welcome to Our Restaurant</h1>
+            <nav class="main-nav">
+                <a href="@Url.Action("Drinks", "Home")" class="btn btnCommon">View Drinks</a>
+                <a href="@Url.Action("FastFoods", "Home")" class="btn btnCommon">View Fast Foods</a>
+                <a href="@Url.Action("HotMeals", "Home")" class="btn btnCommon">View Hot Meals</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <div class="container">
+            <section class="menu-section">
+                <h2>Drinks</h2>
+                <div class="menu-grid">
+                    @foreach (var drink in Model.Drinkss)
+                    {
+                        <div class="menu-card">
+                            <h3>@drink.Name</h3>
+                            <p>@drink.Description</p>
+                            <p class="price">@drink.Price.ToString("C")</p>
+                        </div>
+                    }
+                </div>
+            </section>
+
+            <section class="menu-section">
+                <h2>Fast Foods</h2>
+                <div class="menu-grid">
+                    @foreach (var fastFood in Model.FastFoodss)
+                    {
+                        <div class="menu-card">
+                            <h3>@fastFood.Name</h3>
+                            <p>@fastFood.Description</p>
+                            <p class="price">@fastFood.Price.ToString("C")</p>
+                        </div>
+                    }
+                </div>
+            </section>
+
+            <section class="menu-section">
+                <h2>Hot Meals</h2>
+                <div class="menu-grid">
+                    @foreach (var hotMeal in Model.HotMealss)
+                    {
+                        <div class="menu-card">
+                            <h3>@hotMeal.Name</h3>
+                            <p>@hotMeal.Description</p>
+                            <p class="price">@hotMeal.Price.ToString("C")</p>
+                        </div>
+                    }
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <p>&copy; 2024 Our Restaurant. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>

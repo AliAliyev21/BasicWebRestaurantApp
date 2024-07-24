@@ -1,0 +1,35 @@
+﻿@model List<WebApplicationFirstLesson.Entities.HotMeals>
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Hot Meals Menu</title>
+    <link rel="stylesheet" href="~/css/hotmeals.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Hot Meals Menu</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                    <th>Price</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var hotMeal in Model)
+                {
+                    <tr>
+                        <td>@hotMeal.Id</td>
+                        <td>@hotMeal.Name</td>
+                        <td>@hotMeal.Description</td>
+                        <td>@hotMeal.Price.ToString("C")</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>

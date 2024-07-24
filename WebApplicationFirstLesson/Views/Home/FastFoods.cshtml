@@ -1,0 +1,35 @@
+﻿@model List<WebApplicationFirstLesson.Entities.FastFoods>
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Fast Foods Menu</title>
+    <link rel="stylesheet" href="~/css/fastfoods.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Fast Foods Menu</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                    <th>Price</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var fastFood in Model)
+                {
+                    <tr>
+                        <td>@fastFood.Id</td>
+                        <td>@fastFood.Name</td>
+                        <td>@fastFood.Description</td>
+                        <td>@fastFood.Price.ToString("C")</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>

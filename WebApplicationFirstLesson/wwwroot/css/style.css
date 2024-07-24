@@ -1,0 +1,114 @@
+﻿
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f5f5f5;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 85%;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.site-header {
+    background-color: #1b6ec2;
+    color: #fff;
+    padding: 30px 20px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+    .site-header h1 {
+        margin: 0;
+        font-size: 3rem;
+        font-weight: bold;
+    }
+
+.main-nav {
+    margin-top: 20px;
+}
+
+    .main-nav .btnCommon {
+        padding: 12px 25px;
+        font-size: 1.1rem;
+        text-decoration: none;
+        color: #fff;
+        background-color: #1b6ec2;
+        border-radius: 5px;
+        transition: background-color 0.3s, transform 0.2s;
+        margin: 0 8px;
+        display: inline-block;
+        border-block-color:black;
+        border-color:black
+    }
+
+        .main-nav .btnCommon:hover {
+            background-color: #155a8a;
+            transform: scale(1.05);
+        }
+
+.main-content {
+    margin-top: 40px;
+}
+
+.menu-section {
+    margin-bottom: 60px;
+}
+
+    .menu-section h2 {
+        color: #1b6ec2;
+        font-size: 2.5rem;
+        margin-bottom: 20px;
+        text-align: center;
+    }
+
+.menu-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+}
+
+.menu-card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    padding: 20px;
+    transition: box-shadow 0.3s, transform 0.3s;
+    text-align: center;
+}
+
+    .menu-card h3 {
+        margin-top: 0;
+        font-size: 1.8rem;
+        color: #333;
+    }
+
+    .menu-card p {
+        margin: 10px 0;
+        color: #666;
+    }
+
+    .menu-card .price {
+        font-weight: bold;
+        color: #1b6ec2;
+        font-size: 1.2rem;
+    }
+
+    .menu-card:hover {
+        box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+        transform: scale(1.03);
+    }
+
+.site-footer {
+    background-color: #1b6ec2;
+    color: #fff;
+    padding: 15px 0;
+    text-align: center;
+    margin-top: 40px;
+    box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1);
+}
